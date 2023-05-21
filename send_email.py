@@ -23,7 +23,7 @@ def sendEmail(tetxt):
     filename = "Datafile\data.csv" 
     name = "data.csv"
 
-    # Open CSV file in binary mode
+    # Open CSV file 
     with open(filename, "rb") as attachment:
         part = MIMEBase("application", "octet-stream")
         part.set_payload(attachment.read())
