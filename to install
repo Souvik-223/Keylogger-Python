@@ -1,0 +1,6 @@
+//  Fot keylogger and storing data 
+pip install python 
+
+// For server mailing system 
+pip install smtmplib 
+pip install ssl 
